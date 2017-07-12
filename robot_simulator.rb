@@ -32,4 +32,11 @@ class Robot
     end
   end
 
+  def at(x, y)
+    @x, @y = x, y
+  end
+
+  def coordinates
+    [@x, @y]
+  end
 end
