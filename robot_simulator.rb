@@ -1,8 +1,10 @@
 class Robot
   attr_reader :direction
 
+  CARDINAUX = [:east, :west, :north, :south].freeze
+
   def orient(direction)
-    unless [:east, :west, :north, :south].include?(direction)
+    unless CARDINAUX.include?(direction)
       return raise ArgumentError
     end
     @direction = direction
