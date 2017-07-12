@@ -22,4 +22,14 @@ class Robot
     when :west  then :north
     end
   end
+
+  def turn_left
+    @direction = case @direction
+    when :north then  :west
+    when :south then :east
+    when :east  then :north
+    when :west  then :south
+    end
+  end
+
 end
